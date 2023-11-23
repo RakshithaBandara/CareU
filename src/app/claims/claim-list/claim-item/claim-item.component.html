@@ -1,0 +1,15 @@
+<a href="#" class="list-group" (click)="onSelected()">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div clas="pull-left">
+            <h4 class="list-group-item-heading">{{ claim.name }}</h4>
+            <p class="list-group-item-text">{{ claim.policyNo }}</p>
+        </div>
+            <span class="pull-right">
+                <img
+                    [src]="claim.imagepath"
+                    alt="{{ claim.name }}"
+                    class="img-responsive"
+                    style="height: 50px;">
+            </span>
+    </li>
+</a>

@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-5">
+        <app-claim-list
+        (claimWasSelected)="selectedClaim = $event"></app-claim-list>
+    </div>
+    <div class="col-md-7">
+        <app-claim-detail
+        *ngIf="selectedClaim; else infoText"></app-claim-detail>
+        <ng-template #infoText>
+            <p>Please select a claim!</p>
+        </ng-template>
+    </div>
+</div>
